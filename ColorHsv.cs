@@ -97,7 +97,7 @@ namespace ColorPicker
             double s = (double)this.Saturation / 100;
             double v = (double)this.Value / 100;
 
-            if (Equals(s, 0) == true)
+            if (Equals(s, 0.0) == true)
             {
                 // If s is 0, all colors are the same.
                 // This is some flavor of gray.

@@ -79,7 +79,7 @@ namespace ColorPicker
             double v = max;
             double delta = max - min;
 
-            if (Equals(max, 0) == true || Equals(delta, 0) == true)
+            if (Equals(max, 0.0) == true || Equals(delta, 0.0) == true)
             {
                 // R, G, and B must be 0, or all the same.
                 // In this case, S is 0, and H is undefined.

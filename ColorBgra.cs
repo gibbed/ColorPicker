@@ -25,10 +25,10 @@ namespace ColorPicker
     [Serializable]
     public struct ColorBgra
     {
-        public byte B { get { return (byte)(this.Bgra & 0x000000FFu); } }
-        public byte G { get { return (byte)(this.Bgra & 0x0000FF00u); } }
-        public byte R { get { return (byte)(this.Bgra & 0x00FF0000u); } }
-        public byte A { get { return (byte)(this.Bgra & 0xFF000000u); } }
+        public byte B { get { return (byte)((this.Bgra & 0x000000FFu) >> 0); } }
+        public byte G { get { return (byte)((this.Bgra & 0x0000FF00u) >> 8); } }
+        public byte R { get { return (byte)((this.Bgra & 0x00FF0000u) >> 16); } }
+        public byte A { get { return (byte)((this.Bgra & 0xFF000000u) >> 24); } }
 
         [NonSerialized]
         public readonly uint Bgra;
@@ -491,7 +491,7 @@ namespace ColorPicker
             double g;
             double r;
 
-            if (Equals(asum, 0) == true)
+            if (Equals(asum, 0.0) == true)
             {
                 b = 0;
                 g = 0;

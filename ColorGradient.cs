@@ -374,7 +374,7 @@ namespace ColorPicker
                         double gt;
                         double bt;
 
-                        if (Equals(at, 0) == true)
+                        if (Equals(at, 0.0) == true)
                         {
                             rt = 0;
                             gt = 0;
